@@ -37,7 +37,31 @@ Overnight quant research on BTC market alpha with walk-forward out-of-sample val
 ```bash
 cd btc-alpha-lab
 ./run.sh
+python3 research_lowdd.py
 ```
+
+## Low-DD Track
+
+A dedicated downside-first research track now lives in:
+- `research_lowdd.py`
+- `notebooks/lowdd_research.ipynb`
+- `results/lowdd_summary.json`
+- `results/LOWDD_REPORT.md`
+
+### Strategy families (Low-DD)
+1. Volatility-targeted trend with adaptive sizing
+2. Regime filter + momentum (explicit risk-off)
+3. Statistical linear model with handcrafted features and strict walk-forward OOS
+
+### Validation & constraints
+- Purged walk-forward: train 3y, test 180d, step 180d, purge 5d
+- Costs: 4 bps transaction + 2 bps slippage
+- Objective: downside-priority (Calmar, Sortino, MaxDD, Ulcer, smoothness)
+- Constraints: target annual vol, turnover cap, leverage cap=1
+
+### Current Low-DD best (latest run)
+- **linear_ml**: CAGR **54.13%**, Sharpe **2.17**, Sortino **4.14**, MaxDD **-16.70%**, Calmar **3.24**, Monthly hit **46.24%**, Turnover **13.10x**
+- Prior repo best (`vol_breakout`) had higher raw CAGR but much deeper drawdown (**-70.62%**), making low-DD track more deployable for risk-controlled operation.
 
 ## Manual run
 ```bash
