@@ -63,11 +63,34 @@ A dedicated downside-first research track now lives in:
 - **linear_ml**: CAGR **54.13%**, Sharpe **2.17**, Sortino **4.14**, MaxDD **-16.70%**, Calmar **3.24**, Monthly hit **46.24%**, Turnover **13.10x**
 - Prior repo best (`vol_breakout`) had higher raw CAGR but much deeper drawdown (**-70.62%**), making low-DD track more deployable for risk-controlled operation.
 
+## Triple-Objective Track (CAGR + WinRate + MaxDD)
+
+New artifacts:
+- `research_triple_objective.py`
+- `notebooks/triple_objective_research.ipynb`
+- `results/triple_objective_summary.json`
+- `results/TRIPLE_OBJECTIVE_REPORT.md`
+- `scripts/triple_leaderboard.py`
+
+Methodology:
+- Purged walk-forward OOS (train 4y, test 180d, step 180d, purge 7d)
+- Ensemble of weak sleeves (trend, mean-reversion, breakout, regime, carry-like proxy)
+- ML families: regularized logistic regression + boosted decision stumps
+- Meta-labeling overlay and risk-first sizing (vol targeting + drawdown-aware de-risk ladder)
+- Multi-objective ranking: Pareto frontier + weighted score with Sharpe/Sortino guardrails
+
+**Buy-and-hold hard constraint status (latest run):**
+- No triple-objective candidate beat buy-and-hold on both OOS CAGR and total return.
+- Closest Pareto candidate is selected and explicitly reported in `TRIPLE_OBJECTIVE_REPORT.md`.
+
 ## Manual run
 ```bash
 cd btc-alpha-lab
 python3 research.py
 python3 scripts/leaderboard.py
+python3 research_lowdd.py
+python3 research_triple_objective.py
+python3 scripts/triple_leaderboard.py
 ```
 
 ## Auto re-run (GitHub Actions)

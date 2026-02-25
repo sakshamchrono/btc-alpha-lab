@@ -12,4 +12,8 @@ python3 scripts/leaderboard.py
 echo "[3/3] Running low-DD track"
 python3 research_lowdd.py
 
-echo "Done. See results/REPORT.md, results/LOWDD_REPORT.md, and notebooks/lowdd_research.ipynb"
+echo "[4/4] Running triple-objective track"
+python3 research_triple_objective.py
+python3 scripts/triple_leaderboard.py
+
+echo "Done. See results/REPORT.md, results/LOWDD_REPORT.md, results/TRIPLE_OBJECTIVE_REPORT.md, and notebooks/triple_objective_research.ipynb"
