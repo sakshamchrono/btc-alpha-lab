@@ -2,12 +2,24 @@
 
 Overnight quant research on BTC market alpha with walk-forward out-of-sample validation.
 
+## Strategy leaderboard (OOS, net of 5 bps costs)
+
+| Rank | Strategy | CAGR | Sharpe | Max Drawdown | Win Rate |
+|---|---|---:|---:|---:|---:|
+| 1 | `vol_breakout` | 78.09% | 1.33 | -70.62% | 25.82% |
+| 2 | `trend_following` | 27.81% | 0.74 | -69.50% | 22.33% |
+| 3 | `mean_reversion` | 3.99% | 0.29 | -51.66% | 8.22% |
+
+> Current best alpha in this repo: **volatility breakout/regime**. Still requires strict risk controls before live deployment.
+
 ## What this repo contains
 - `research.py` — full research pipeline (stdlib Python, no extra deps required)
 - `notebooks/btc_alpha_research.ipynb` — clear notebook report + reproducible analysis summary
 - `data/btc_usd_daily_stooq.csv` — ingested historical BTC daily OHLC data
 - `results/summary.json` — full output artifacts (metrics, walk-forward parameter logs, OOS returns, sensitivity)
 - `results/REPORT.md` — concise findings and caveats
+- `scripts/leaderboard.py` — prints strategy ranking from latest results
+- `run.sh` — one-command execution pipeline
 
 ## Strategy families tested
 1. Trend-following (SMA crossover)
@@ -21,11 +33,28 @@ Overnight quant research on BTC market alpha with walk-forward out-of-sample val
 - Metrics: CAGR, Sharpe, Max Drawdown, Win Rate, annualized volatility
 - Sensitivity: transaction cost stress at 2/5/10/20 bps
 
-## Reproduce
+## One-command run
+```bash
+cd btc-alpha-lab
+./run.sh
+```
+
+## Manual run
 ```bash
 cd btc-alpha-lab
 python3 research.py
+python3 scripts/leaderboard.py
 ```
+
+## Auto re-run (GitHub Actions)
+Workflow: `.github/workflows/backtest.yml`
+- Triggers:
+  - weekly schedule (`cron`)
+  - manual trigger (`workflow_dispatch`)
+  - pushes to `main`
+- Actions:
+  - runs `research.py`
+  - uploads `results/`, `data/`, and notebook as artifacts
 
 ## Concise progress log
 - 2026-02-25 20:12 UTC — Initialized repo structure and research plan.
@@ -33,3 +62,4 @@ python3 research.py
 - 2026-02-25 20:20 UTC — Ingested BTC daily data and generated OOS metrics + sensitivity outputs.
 - 2026-02-25 20:22 UTC — Built notebook report and summarized best strategy with caveats.
 - 2026-02-25 20:23 UTC — Prepared git repository for commit/push.
+- 2026-02-25 20:35 UTC — Added leaderboard section, one-command runner, and GitHub Actions workflow.
