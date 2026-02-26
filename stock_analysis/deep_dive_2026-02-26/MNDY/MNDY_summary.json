@@ -1,0 +1,48 @@
+{
+  "ticker": "MNDY",
+  "current_price": 74.31,
+  "targets": {
+    "bear": 58,
+    "base": 85,
+    "bull": 125
+  },
+  "probabilities": {
+    "bear": 0.25,
+    "base": 0.5,
+    "bull": 0.25
+  },
+  "max_drawdown_estimate": {
+    "most_likely_range": "38%-45%",
+    "stress_tail": "~60%",
+    "historical_2y_observed": "-78.6%"
+  },
+  "upside_downside": {
+    "bear_vs_current": -0.22,
+    "base_vs_current": 0.144,
+    "bull_vs_current": 0.682,
+    "probability_weighted_target": 88.25,
+    "pw_upside_vs_current": 0.188
+  },
+  "confidence": {
+    "overall": "medium-low",
+    "price_technical": "high",
+    "fundamental_snapshot": "medium"
+  },
+  "thesis": "MNDY combines elite gross margins, strong net-cash balance sheet, and robust FCF generation. The stock has undergone severe derating, and if high-teens growth is sustained with stable-to-slightly improved valuation multiples, 1-year expected value is positive. However, volatility and drawdown risk remain very high.",
+  "risk_flags": [
+    "High realized volatility and deep historical drawdowns",
+    "Potential growth deceleration vs guidance",
+    "Valuation multiple compression risk in SaaS",
+    "GAAP profitability still fragile vs non-GAAP strength",
+    "Primary IR data access partially constrained by anti-bot protections"
+  ],
+  "sources": [
+    "https://stockanalysis.com/stocks/mndy/statistics/",
+    "https://stockanalysis.com/stocks/asan/statistics/",
+    "https://stockanalysis.com/stocks/smar/statistics/",
+    "https://stockanalysis.com/stocks/hubs/statistics/",
+    "https://ir.monday.com/financials-and-filings/quarterly-results/default.aspx",
+    "https://ir.monday.com/news-and-events/news-releases/news-details/2025/monday.com-Announces-Fourth-Quarter-and-Fiscal-Year-2024-Results/default.aspx",
+    "https://query1.finance.yahoo.com/v8/finance/chart/MNDY?range=2y&interval=1d"
+  ]
+}
