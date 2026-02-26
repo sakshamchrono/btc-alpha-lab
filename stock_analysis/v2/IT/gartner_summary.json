@@ -1,0 +1,53 @@
+
+{
+  "ticker": "IT",
+  "company_name": "Gartner, Inc.",
+  "current_price": 148.33,
+  "analysis_date": "2026-02-26",
+  "fundamental_analysis": {
+    "revenue_fy2025": 6.5e9,
+    "revenue_growth_fy2025_pct": 4,
+    "adj_eps_fy2025": 13.17,
+    "guidance_fy2026_revenue_min": 6.455e9,
+    "guidance_fy2026_revenue_growth_fx_neutral_pct": 2,
+    "guidance_fy2026_adj_eps_min": 12.30,
+    "valuation_pe_ratio_current": 12.01,
+    "valuation_pe_ratio_5yr_avg": 33.5,
+    "valuation_pe_ratio_10yr_avg": 130.0,
+    "valuation_comment": "Trading at a significant discount to historical P/E averages."
+  },
+  "technical_analysis": {
+    "trend": "Bearish",
+    "moving_averages": "Sell signals across most MAs",
+    "support_levels": [149.76, 139.14],
+    "resistance_levels": [160.38, 171.00],
+    "key_indicators": ["ADX: Sell", "ROC: Sell"],
+    "recent_performance": "Significant volatility, -70% YoY decline, but recent 4-week gains.",
+    "sentiment": "Bearish"
+  },
+  "quantitative_analysis": {
+    "volatility_weekly_pct": 8,
+    "beta_5yr_avg": 1.21,
+    "price_targets": {
+      "bear": {"target": 135.0, "probability": 0.30},
+      "base": {"target": 170.0, "probability": 0.50},
+      "bull": {"target": 205.0, "probability": 0.20}
+    },
+    "max_drawdown_estimate_1yr_pct": -20.0,
+    "max_drawdown_estimate_1yr_usd": -29.67,
+    "max_drawdown_comment": "Potential for further drawdown, though less severe than past year's ~70% drop."
+  },
+  "investment_thesis": "Gartner is currently undervalued relative to its historical multiples, facing significant headwinds from AI disruption and a challenging market. However, its strategic investments in AI and potential for adaptation offer a path to recovery. The base case scenario suggests a modest upside towards $160-$180, supported by analyst targets, but risks remain substantial.",
+  "risk_flags": [
+    "AI Disruption Threat",
+    "Execution Risk in AI Transition",
+    "Macroeconomic Slowdown",
+    "Further Guidance Misses",
+    "High Volatility"
+  ],
+  "confidence": "Medium",
+  "sources": [
+    "Web Search Results (Q4 2025/2026 Earnings, Technical Analysis, P/E Ratios, Volatility, Beta, Analyst Targets)",
+    "Internal analysis of financial data and market trends."
+  ]
+}
