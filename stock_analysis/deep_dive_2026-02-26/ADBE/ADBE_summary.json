@@ -1,0 +1,45 @@
+{
+  "ticker": "ADBE",
+  "current_price": 257.81,
+  "targets": {
+    "bear": 210,
+    "base": 300,
+    "bull": 365
+  },
+  "probabilities": {
+    "bear": 0.3,
+    "base": 0.5,
+    "bull": 0.2
+  },
+  "max_drawdown_estimate": {
+    "most_likely_1y": -0.38,
+    "tail_1y": -0.55,
+    "historical_worst_rolling_1y": -0.7296,
+    "method": "scenario_plus_historical_rolling_252d"
+  },
+  "upside_downside": {
+    "bear_pct": -0.1855,
+    "base_pct": 0.1636,
+    "bull_pct": 0.4158,
+    "probability_weighted_expected_price": 286
+  },
+  "confidence": "medium",
+  "thesis": "Adobe remains a high-margin, cash-generative software leader trading at a discounted trailing P/E versus major software peers; key debate is GenAI monetization durability versus competitive disruption. Base case assumes stable execution and partial valuation normalization.",
+  "risk_flags": [
+    "AI-native competitive disruption in creative workflows",
+    "Potential multiple compression if growth guidance weakens",
+    "Monetization risk for generative AI features",
+    "Elevated volatility and drawdown risk in narrative resets",
+    "Data-source limitations due to filing/page access throttling"
+  ],
+  "sources": [
+    "https://stooq.com/q/d/l/?s=adbe.us&i=d",
+    "https://news.adobe.com/news/2025/12/122025-q4earnings",
+    "https://companiesmarketcap.com/adobe/revenue/",
+    "https://companiesmarketcap.com/adobe/operating-margin/",
+    "https://companiesmarketcap.com/adobe/pe-ratio/",
+    "https://companiesmarketcap.com/salesforce/pe-ratio/",
+    "https://companiesmarketcap.com/intuit/pe-ratio/",
+    "https://companiesmarketcap.com/servicenow/pe-ratio/"
+  ]
+}
