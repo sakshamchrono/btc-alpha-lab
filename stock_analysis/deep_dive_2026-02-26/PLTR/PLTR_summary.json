@@ -1,0 +1,59 @@
+{
+  "ticker": "PLTR",
+  "current_price": 134.19,
+  "targets": {
+    "bear": 85,
+    "base": 145,
+    "bull": 210
+  },
+  "probabilities": {
+    "bear": 0.25,
+    "base": 0.5,
+    "bull": 0.25
+  },
+  "max_drawdown_estimate": {
+    "bear": -0.6,
+    "base": -0.38,
+    "bull": -0.25,
+    "weighted_expected": -0.403,
+    "historical_context": {
+      "full_history_max_drawdown": -0.846,
+      "rolling_1y_median": -0.406,
+      "rolling_1y_worst": -0.767
+    }
+  },
+  "upside_downside": {
+    "bear_vs_spot": -0.367,
+    "base_vs_spot": 0.081,
+    "bull_vs_spot": 0.565,
+    "probability_weighted_target": 146.25,
+    "probability_weighted_return": 0.09
+  },
+  "confidence": {
+    "score": 0.58,
+    "level": "medium",
+    "notes": "High confidence in directional risk (valuation + volatility), medium confidence in exact target levels due to multiple sensitivity."
+  },
+  "thesis": "Palantir has transitioned into strong profitability with elite margins and accelerating revenue, but the stock embeds an extreme valuation premium versus software peers. If growth remains exceptional, upside persists; if growth normalizes, multiple compression can dominate returns.",
+  "risk_flags": [
+    "Extreme valuation premium vs peers (very high P/S)",
+    "High realized volatility (~70% annualized)",
+    "Large historical drawdown profile",
+    "Potential growth deceleration / contract timing risk",
+    "Momentum regime weakened (price below 50/200DMA)"
+  ],
+  "sources": [
+    "https://data.sec.gov/api/xbrl/companyfacts/CIK0001321655.json",
+    "https://data.sec.gov/submissions/CIK0001321655.json",
+    "https://stooq.com/q/d/l/?s=pltr.us&i=d",
+    "https://companiesmarketcap.com/palantir/marketcap/",
+    "https://companiesmarketcap.com/snowflake/marketcap/",
+    "https://companiesmarketcap.com/datadog/marketcap/",
+    "https://companiesmarketcap.com/crowdstrike/marketcap/",
+    "https://companiesmarketcap.com/mongodb/marketcap/",
+    "https://data.sec.gov/api/xbrl/companyfacts/CIK0001640147.json",
+    "https://data.sec.gov/api/xbrl/companyfacts/CIK0001561550.json",
+    "https://data.sec.gov/api/xbrl/companyfacts/CIK0001535527.json",
+    "https://data.sec.gov/api/xbrl/companyfacts/CIK0001441816.json"
+  ]
+}
