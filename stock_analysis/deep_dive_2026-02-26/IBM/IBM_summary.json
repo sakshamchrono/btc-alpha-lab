@@ -1,0 +1,50 @@
+{
+  "ticker": "IBM",
+  "current_price": 237.54,
+  "targets": {
+    "bear": 190.0,
+    "base": 270.0,
+    "bull": 335.0
+  },
+  "probabilities": {
+    "bear": 0.3,
+    "base": 0.45,
+    "bull": 0.25
+  },
+  "max_drawdown_estimate": {
+    "expected": -0.225,
+    "scenario_range": [-0.35, -0.12],
+    "historical_1y_observed": -0.2909,
+    "historical_10y_worst": -0.4791,
+    "comment": "Expected 1Y peak-to-trough drawdown ~22.5%, with plausible range 20-35% and stress tail >40%."
+  },
+  "upside_downside": {
+    "bear_return": -0.2001,
+    "base_return": 0.1367,
+    "bull_return": 0.4103,
+    "probability_weighted_target": 261.25,
+    "probability_weighted_return": 0.0998
+  },
+  "confidence": {
+    "score": 0.62,
+    "label": "medium",
+    "notes": "Company release data high confidence; aggregator valuation/fundamental snapshots moderate confidence; technicals reproducible from Yahoo historical prices."
+  },
+  "thesis": "IBM shows improved growth breadth, margin expansion, and strong free cash flow. Current technical setup is weak/oversold, but medium-term risk-reward is positive if software-led growth and AI monetization continue and consulting stabilizes.",
+  "risk_flags": [
+    "Consulting demand cyclicality",
+    "Post-mainframe-cycle infrastructure normalization",
+    "AI bookings-to-revenue conversion uncertainty",
+    "Relatively high leverage versus pure software peers",
+    "Elevated near-term volatility and trend breakdown"
+  ],
+  "sources": [
+    "https://newsroom.ibm.com/2026-01-28-IBM-RELEASES-FOURTH-QUARTER-RESULTS",
+    "https://stockanalysis.com/stocks/ibm/financials/",
+    "https://stockanalysis.com/stocks/ibm/statistics/",
+    "https://stockanalysis.com/stocks/msft/statistics/",
+    "https://stockanalysis.com/stocks/orcl/statistics/",
+    "https://stockanalysis.com/stocks/acn/statistics/",
+    "https://query1.finance.yahoo.com/v8/finance/chart/IBM?range=10y&interval=1d"
+  ]
+}
