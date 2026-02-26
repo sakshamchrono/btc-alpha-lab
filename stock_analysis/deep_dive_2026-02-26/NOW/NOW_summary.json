@@ -1,0 +1,53 @@
+{
+  "ticker": "NOW",
+  "current_price": 104.23,
+  "targets": {
+    "bear": 78,
+    "base": 122,
+    "bull": 155
+  },
+  "probabilities": {
+    "bear": 0.3,
+    "base": 0.5,
+    "bull": 0.2
+  },
+  "max_drawdown_estimate": {
+    "central": -0.35,
+    "stress_tail": -0.5,
+    "historical_1y_median": -0.257,
+    "historical_1y_p10": -0.465
+  },
+  "upside_downside": {
+    "bear_pct": -0.252,
+    "base_pct": 0.17,
+    "bull_pct": 0.487,
+    "probability_weighted_target": 115.4,
+    "probability_weighted_return_pct": 0.107
+  },
+  "confidence": {
+    "overall": "medium",
+    "fundamental_data_confidence": "medium",
+    "technical_data_confidence": "high",
+    "notes": "Technical/statistical metrics computed from Stooq daily OHLCV. Some primary IR/SEC pages were blocked during fetch, so fundamentals were triangulated from multiple public indexed sources."
+  },
+  "thesis": "ServiceNow remains a structurally strong enterprise software platform with durable growth and high cash-generation, but its premium valuation and current bearish technical regime increase 12-month downside volatility. Base case favors moderate recovery as growth persists and trend stabilizes.",
+  "risk_flags": [
+    "valuation_multiple_compression",
+    "enterprise_IT_budget_slowdown",
+    "AI_monetization_execution_risk",
+    "high_realized_volatility",
+    "downtrend_below_50D_200D_MA"
+  ],
+  "sources": [
+    "https://stooq.com/q/d/l/?s=now.us&i=d",
+    "https://investor.servicenow.com/financial-resources/sec-filings/default.aspx",
+    "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-Reports-Fourth-Quarter-and-Full-Year-2025-Financial-Results-Board-of-Directors-Authorizes-Additional-5B-for-Share-Repurchase-Program/default.aspx",
+    "https://companiesmarketcap.com/servicenow/marketcap/",
+    "https://www.macrotrends.net/stocks/charts/NOW/servicenow/revenue",
+    "https://www.macrotrends.net/stocks/charts/NOW/servicenow/free-cash-flow",
+    "https://www.financecharts.com/stocks/NOW/value/ev-to-sales",
+    "https://www.financecharts.com/stocks/CRM/value/ev-to-sales",
+    "https://www.financecharts.com/stocks/WDAY/value/ev-to-sales",
+    "https://multiples.vc/public-comps/servicenow-valuation-multiples"
+  ]
+}
