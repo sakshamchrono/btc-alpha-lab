@@ -1,0 +1,50 @@
+{
+  "ticker": "CRM",
+  "current_price": 191.75,
+  "targets": {
+    "bear": 145,
+    "base": 245,
+    "bull": 320
+  },
+  "probabilities": {
+    "bear": 0.3,
+    "base": 0.5,
+    "bull": 0.2
+  },
+  "max_drawdown_estimate": {
+    "expected_1y": -0.329,
+    "stress_case": -0.45,
+    "historical_5y_observed": -0.586,
+    "recent_52w_peak_to_trough": -0.443
+  },
+  "upside_downside": {
+    "bear": -0.244,
+    "base": 0.278,
+    "bull": 0.669,
+    "probability_weighted_expected_price": 230.0,
+    "probability_weighted_expected_return": 0.199
+  },
+  "confidence": {
+    "score": 0.58,
+    "level": "medium",
+    "notes": "Confidence reduced by mixed source quality and bearish technical regime despite strong cash generation."
+  },
+  "thesis": "Salesforce is a high-quality, cash-generative software platform with improved margins and solid FCF, trading below premium software peers on several multiples. Upside depends on sustaining mid/high-single-digit growth and translating AI product momentum into durable monetization while protecting margins.",
+  "risk_flags": [
+    "Revenue growth deceleration risk",
+    "AI monetization may lag expectations",
+    "Multiple compression in risk-off or higher-rate environments",
+    "Competitive pressure from platform vendors (notably Microsoft)",
+    "Technical trend remains bearish below 50DMA and 200DMA"
+  ],
+  "sources": [
+    "https://stooq.com/q/d/l/?s=crm.us&i=d",
+    "https://investor.salesforce.com/news/news-details/2025/Salesforce-Announces-Fourth-Quarter-and-Fiscal-Year-2025-Results/default.aspx",
+    "https://www.salesforce.com/news/press-releases/2025/02/26/fy25-q4-earnings/",
+    "https://stockanalysis.com/stocks/crm/statistics/",
+    "https://stockanalysis.com/stocks/adbe/statistics/",
+    "https://stockanalysis.com/stocks/orcl/statistics/",
+    "https://stockanalysis.com/stocks/msft/statistics/",
+    "https://stockanalysis.com/stocks/sap/statistics/"
+  ]
+}
