@@ -1,0 +1,52 @@
+{
+  "ticker": "TEAM",
+  "current_price": 73.19,
+  "targets": {
+    "bear": 58,
+    "base": 95,
+    "bull": 136
+  },
+  "probabilities": {
+    "bear": 0.25,
+    "base": 0.5,
+    "bull": 0.25
+  },
+  "max_drawdown_estimate": {
+    "one_year_central": -0.45,
+    "stress_tail_range": [-0.6, -0.75],
+    "historical_full_series_max": -0.8498,
+    "historical_worst_rolling_1y": -0.7695
+  },
+  "upside_downside": {
+    "bear_vs_spot": -0.2077,
+    "base_vs_spot": 0.2979,
+    "bull_vs_spot": 0.858,
+    "probability_weighted_expected_price": 96
+  },
+  "confidence": {
+    "overall": "medium",
+    "fundamental": "medium-high",
+    "technical": "high",
+    "valuation": "medium",
+    "notes": "Price/technical metrics are high confidence from direct OHLC data. Fundamental and valuation confidence moderated by partial reliance on third-party aggregation and SEC fetch blockage."
+  },
+  "thesis": "Atlassian combines resilient double-digit growth and strong free-cash-flow economics with a heavily derated valuation multiple. The stock is technically damaged and high-volatility, but if growth and enterprise monetization remain intact, a 12-month re-rating toward mid-90s is plausible.",
+  "risk_flags": [
+    "Prolonged risk-off sentiment toward software growth equities",
+    "Sustained GAAP operating losses / margin disappointment",
+    "Cloud growth deceleration and weaker net retention",
+    "AI monetization execution risk",
+    "High realized volatility and potential for deep interim drawdowns"
+  ],
+  "sources": [
+    "https://stooq.com/q/d/l/?s=team.us&i=d",
+    "https://www.atlassian.com/blog/announcements/shareholder-letter-q2fy26",
+    "https://stockanalysis.com/stocks/team/",
+    "https://stockanalysis.com/stocks/team/financials/",
+    "https://stockanalysis.com/stocks/team/statistics/",
+    "https://companiesmarketcap.com/atlassian/ps-ratio/",
+    "https://companiesmarketcap.com/servicenow/ps-ratio/",
+    "https://companiesmarketcap.com/salesforce/ps-ratio/",
+    "https://companiesmarketcap.com/snowflake/ps-ratio/"
+  ]
+}
