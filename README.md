@@ -83,6 +83,31 @@ Methodology:
 - No triple-objective candidate beat buy-and-hold on both OOS CAGR and total return.
 - Closest Pareto candidate is selected and explicitly reported in `TRIPLE_OBJECTIVE_REPORT.md`.
 
+## Fib-Pivot-Halving Track (feature-extension ablation)
+
+New artifacts:
+- `research_fib_pivot_halving_track.py`
+- `notebooks/fib_pivot_halving_track.ipynb`
+- `results/fib-pivot-halving-track/summary.json`
+- `results/fib-pivot-halving-track/REPORT.md`
+
+Methodology:
+- Purged walk-forward OOS (train 4y, test 180d, step 180d, purge 7d)
+- Frictions: 4 bps transaction cost + 2 bps slippage
+- Leakage-safe ablation: baseline vs +fib vs +pivots vs +halving vs combined
+- Metrics reported: CAGR, total return, Sharpe, Sortino, MaxDD, Calmar, win rate, monthly hit rate, turnover
+
+Latest findings (OOS):
+- Baseline: CAGR **2.84%**, Win **12.46%**, MaxDD **-1.89%**
+- +Fib: CAGR **5.15%**, Win **15.63%**, MaxDD **-2.80%**
+- +Pivots: CAGR **2.80%**, Win **14.52%**, MaxDD **-2.38%**
+- +Halving: CAGR **7.75%**, Win **19.96%**, MaxDD **-4.89%**
+- Combined: CAGR **8.33%**, Win **21.43%**, MaxDD **-5.29%**
+
+Interpretation:
+- These features improved **CAGR** and **win rate** versus the same baseline, led by halving-cycle features.
+- Improvement was **not material** against the repo's latest recommended strategy (`lowdd::linear_ml`, CAGR **54.13%**) or against buy-and-hold return levels; gains are mainly in smoother risk profile / lower drawdown.
+
 ## Manual run
 ```bash
 cd btc-alpha-lab
@@ -91,6 +116,7 @@ python3 scripts/leaderboard.py
 python3 research_lowdd.py
 python3 research_triple_objective.py
 python3 scripts/triple_leaderboard.py
+python3 research_fib_pivot_halving_track.py
 ```
 
 ## Auto re-run (GitHub Actions)
