@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "duckduckgo-search": {
+      "version": "1.0.0",
+      "installedAt": 1772046140659
+    },
+    "gemini": {
+      "version": "1.0.0",
+      "installedAt": 1772046157755
+    },
+    "github": {
+      "version": "1.0.0",
+      "installedAt": 1772046185431
+    }
+  }
+}
