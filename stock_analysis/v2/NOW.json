@@ -1,0 +1,37 @@
+{
+  "ticker": "NOW",
+  "current_price": 104.25,
+  "targets": {
+    "bear": 115.00,
+    "base": 195.00,
+    "bull": 260.00
+  },
+  "probabilities": {
+    "bear": 0.15,
+    "base": 0.60,
+    "bull": 0.25
+  },
+  "max_drawdown_estimate": 0.15,
+  "upside_downside": {
+    "upside": 0.87,
+    "downside": -0.10
+  },
+  "confidence": "Moderate",
+  "thesis": "ServiceNow is a high-growth SaaS company with strong market positioning and diverse product offerings. Despite a high valuation, its consistent ability to exceed earnings expectations and expand its customer base suggests continued upward potential, supported by a majority of analyst ratings.",
+  "risk_flags": [
+    "High valuation multiples",
+    "Intense competition",
+    "Potential slowdown in subscription revenue growth",
+    "Negative technical indicators"
+  ],
+  "sources": [
+    "marketbeat.com",
+    "public.com",
+    "servicenow.com",
+    "investingnews.com",
+    "mlq.ai",
+    "stockstory.org",
+    "investing.com",
+    "fool.com"
+  ]
+}
