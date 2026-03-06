@@ -3,7 +3,7 @@
 **Data Period**: Last 30 Days (3-minute candles)
 **Strategy**: Pure Heikin Ashi Color Change (Red to Green = Buy, Green to Red = Sell)
 **Filter 1**: Candle size > 25 points ($25.0) -> Exit current position, but NO new entry.
-**Filter 2**: NO new entries during IST blockouts (02:15 AM - 04:30 AM AND 09:15 AM - 11:00 AM).
+**Filter 2 (Time)**: NO new entries during IST blockouts (02:15 AM - 04:30 AM AND 09:15 AM - 11:00 AM).
 
 ## Performance Summary
 - **Total Trades**: 2770
