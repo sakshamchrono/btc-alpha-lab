@@ -1,7 +1,7 @@
 import csv
 from datetime import datetime
 
-def run_backtest_python(csv_file, timeframe_label):
+def run_backtest_10m(csv_file):
     df = []
     with open(csv_file, 'r') as f:
         reader = csv.DictReader(f)
@@ -72,8 +72,6 @@ def run_backtest_python(csv_file, timeframe_label):
     win_rate = (winning_trades / total_trades * 100) if total_trades else 0
     total_pnl = sum(trades)
     
-    print(f"[{timeframe_label} IST Blockout] Python Validation - Trades: {total_trades} | Win Rate: {win_rate:.2f}% | PnL: ${total_pnl:.2f}")
+    print(f"[10m IST Blockout] Python Validation - Trades: {total_trades} | Win Rate: {win_rate:.2f}% | PnL: ${total_pnl:.2f}")
 
-run_backtest_python('xauusd_5m_30days.csv', '5m')
-run_backtest_python('xauusd_10m_30days.csv', '10m')
-run_backtest_python('xauusd_15m_30days.csv', '15m')
+run_backtest_10m('xauusd_10m_30days.csv')
