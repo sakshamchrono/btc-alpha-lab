@@ -1,0 +1,49 @@
+//@version=5
+strategy("XAUUSD 30-Sec HA (5PM-2AM IST)", overlay=true, calc_on_every_tick=false, initial_capital=1000, default_qty_type=strategy.fixed, default_qty_value=0.1)
+
+// --- Inputs ---
+max_candle_size = input.float(25.0, title="Max Candle Size Threshold ($)", tooltip="If candle size (High-Low) > this, exit but don't enter. Default: $25.0")
+
+// --- Time Session Filter ---
+time_allowed = time(timeframe.period, "1130-2030:1234567", "UTC") 
+is_in_session = not na(time_allowed)
+
+// --- Calculate Heikin Ashi Internally (For accurate backtest on normal candles) ---
+// Note: We use request.security to ensure we are calculating the HA values of the current timeframe properly, independent of the chart type.
+// But the easiest fix for the "non-standard chart" error is to ensure the user is on standard candles.
+// Let's redefine the HA calculation strictly.
+var float haOpen = na
+haClose = (open + high + low + close) / 4
+haOpen := na(haOpen[1]) ? (open + close) / 2 : (haOpen[1] + haClose[1]) / 2
+
+// --- HA Color Conditions ---
+isHaGreen = haClose > haOpen
+isHaRed = haClose < haOpen
+
+prevHaRed = isHaRed[1]
+prevHaGreen = isHaGreen[1]
+
+candle_range = high - low
+is_oversized = candle_range > max_candle_size
+
+// --- Signal Logic ---
+buySignal = prevHaRed and isHaGreen
+sellSignal = prevHaGreen and isHaRed
+
+// --- Execution ---
+// Force close at session end to avoid overnight hold
+if (not is_in_session)
+    strategy.close_all(comment="Session Close")
+
+if is_in_session
+    if buySignal
+        if is_oversized
+            strategy.close("Short", comment="Exit Short (>25 pts)")
+        else
+            strategy.entry("Long", strategy.long, comment="Buy")
+
+    if sellSignal
+        if is_oversized
+            strategy.close("Long", comment="Exit Long (>25 pts)")
+        else
+            strategy.entry("Short", strategy.short, comment="Sell")

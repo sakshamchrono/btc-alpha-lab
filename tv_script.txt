@@ -1,0 +1,57 @@
+//@version=5
+strategy("XAUUSD 30-Sec HA (5PM - 2AM IST) by Chrono", overlay=true, calc_on_every_tick=false, initial_capital=1000, default_qty_type=strategy.fixed, default_qty_value=0.1)
+
+// --- Inputs ---
+max_candle_size = input.float(25.0, title="Max Candle Size Threshold ($)", tooltip="If candle size (High-Low) is greater than this, exit current position but don't enter a new one. Default: $25.0")
+
+// --- Time Session Filter (IST Calculation) ---
+// Note: TradingView uses exchange timezone or your local timezone. 
+// The safest way is to use UTC time directly in the code to ensure consistency anywhere in the world.
+// 5:00 PM IST is 11:30 UTC
+// 2:00 AM IST (next day) is 20:30 UTC
+// So we trade ONLY when time is between 11:30 UTC and 20:30 UTC.
+time_allowed = time(timeframe.period, "1130-2030:1234567", "UTC") 
+is_in_session = not na(time_allowed)
+
+// --- Calculate Heikin Ashi Internally ---
+// Doing this so you can apply the strategy to a NORMAL Candlestick chart and get accurate, non-repainting backtest results.
+var float haOpen = na
+haClose = (open + high + low + close) / 4
+haOpen := na(haOpen[1]) ? (open + close) / 2 : (haOpen[1] + haClose[1]) / 2
+
+// --- Conditions ---
+isHaGreen = haClose > haOpen
+isHaRed = haClose < haOpen
+
+prevHaRed = isHaRed[1]
+prevHaGreen = isHaGreen[1]
+
+candle_range = high - low
+is_oversized = candle_range > max_candle_size
+
+// --- Entry Logic ---
+buySignal = prevHaRed and isHaGreen
+sellSignal = prevHaGreen and isHaRed
+
+// --- Execution ---
+// If the session closes, force exit all positions to prevent holding through Asian chop.
+if (not is_in_session)
+    strategy.close_all(comment="Session Close")
+
+if is_in_session
+    if buySignal
+        if is_oversized
+            // Exit Short but DO NOT go Long
+            strategy.close("Short", comment="Exit Short (>25 pts)")
+        else
+            // Enter Long
+            strategy.entry("Long", strategy.long, comment="Buy")
+
+    if sellSignal
+        if is_oversized
+            // Exit Long but DO NOT go Short
+            strategy.close("Long", comment="Exit Long (>25 pts)")
+        else
+            // Enter Short
+            strategy.entry("Short", strategy.short, comment="Sell")
+
