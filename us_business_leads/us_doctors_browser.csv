@@ -1,21 +1,29 @@
-Name,Email,Location,Website,Reviews,Rating
-Business Name,Email,Location,Website,Reviews,Rating
-Edward S. Goldberg, MD, concierge@example.com, New York, NY, https://conciergemdny.com/, 24, 5
-Manhattan Family Practice, info@manhattanfamilypractice.com, New York, https://manhattanfamilypractice.com/, 0, 5
-MEDOWS CPA, PLLC, info@medowscpa.com, New York, NY, https://www.medowscpa.com/, 0, 5
-Adler & Adler, PLLC, contact@adlerandadler.com, New York, https://adlerandadler.com/, 0, 5
-The Pohl Law Group LLC, info@pohllawgroup.com, New York, https://www.manhattanestatelawyer.com/, 0, 5
-Name,Email,Location,Website,N/A,N/A
-New York Dermatology Group,info@nydg.com,New York, NY,https://nydermatologygroup.com/,N/A,N/A
-SINY Dermatology,info@sinyderm.com,Brooklyn, NY,https://www.sinyderm.com/,N/A,N/A
-Hudson Dermatology,hello@hudsondermatology.com,New York, NY,https://hudsondermatology.com/,N/A,N/A
-IPANY,ipapma@ipany.com,Smithtown, NY,https://www.ipany.com/,N/A,N/A
-NYSSCPA,membership@nysscpa.org,New York, NY,https://www.nysscpa.org/,N/A,N/A
-Ivan W. Harper, CPA,ivanharper@aol.com,New York, NY,N/A,N/A,N/A
-Horowitz & Ullmann, CPAs, PC,shung@horowitz-ullmann.com,New York, NY,N/A,N/A,N/A
-Horne LLP,joey.havens@hornellp.com,New York, NY,N/A,N/A,N/A
-Name,Email,Location,Website,N/A,N/A
-AVRP Studios,connect@avrpstudios.com,San Diego, CA,https://www.avrpstudios.com/,N/A,N/A
-KMA Architecture,info@kma-ae.com,San Diego, CA,https://www.kma-ae.com/,N/A,N/A
-Roesling Nakamura Terada Architects,rntmarketing@rntarchitects.com,San Diego, CA,https://www.rntarchitects.com/,N/A,N/A
-Abbo Tax CPA,info@abbotax.com,San Diego, CA,https://www.abbotax.com/,N/A,N/A
+Business Name,Email,City/State,WebsiteURL,N/A,N/A
+Business Name,Email,City/State,WebsiteURL,N/A,N/A
+MJ Ahmed CPA PLLC,mj@dallascpa.net,Dallas,dallascpa.net,N/A,N/A
+Grissom & Company, PLLC,info@grissomcpa.com,Dallas,grissomcpa.com,N/A,N/A
+Rex Draughn CPA,N/A,Dallas,cpa-dallas.com,N/A,N/A
+Patten & Co,info@ptcpas.com,Dallas,ptcpas.com,N/A,N/A
+Mark Patten,mpatten@ptcpas.com,Dallas,ptcpas.com,N/A,N/A
+Chelsea Ngo,cngo@ptcpas.com,Dallas,ptcpas.com,N/A,N/A
+Evans Sternau CPA,info@es.cpa,Houston,es.cpa,N/A,N/A
+Abbas CPA,info@abbas-cpa.com,Houston,abbas-cpa.com,N/A,N/A
+JAG CPA & Co.,bianca@jagcpa.com,Houston,jagcpa.com,N/A,N/A
+AKIF CPA,info@akifcpa.com,Houston,akifcpa.com,N/A,N/A
+Hollis CPA Firm,cameron@holliscpa.com,Austin,holliscpa.com,N/A,N/A
+McMordie & Company, CPAs,admin@mcmordiecpa.com,Austin,mcmordiecpa.com,N/A,N/A
+Arbor Creek Tax & Consulting (North),sharon@arborcreektax.com,Austin,arborcreektax.com,N/A,N/A
+Arbor Creek Tax & Consulting (West),tori@arborcreektax.com,Austin,arborcreektax.com,N/A,N/A
+Lisa S. Johnston, CPA, PLLC,info@lsjcpa.com,Austin,lsjcpa.com,N/A,N/A
+theCPAteam.com,avz@thecpateam.com,Austin,thecpateam.com,N/A,N/A
+Ray CPA Tax and Accounting, LLC,rray@raycpallc.com,San Antonio,raycpallc.com,N/A,N/A
+AccountsFit,patti@accountsfit.com,San Antonio,accountsfit.com,N/A,N/A
+Adam Dickreiter, CPA, PLLC,adamd@mysanantoniocpa.com,San Antonio,mysanantoniocpa.com,N/A,N/A
+John F. Coggin CPA, PLLC,john@jcoggincpa.com,San Antonio,jcoggincpa.com,N/A,N/A
+ADKF, P.C.,susan.valdez@adkf.com,San Antonio,adkf.com,N/A,N/A
+Haynie & Company,sanantonioinfo@hayniecpas.com,San Antonio,hayniecpas.com,N/A,N/A
+Fred Flores CPA,info@fredflorescpa.com,San Antonio,fredflorescpa.com,N/A,N/A
+Sol Schwartz & Associates,info@ssacpa.com,San Antonio,ssacpa.com,N/A,N/A
+Patrick J. Haddon, CPA,patrick@pjhaddoncpa.com,Chicago,pjhaddoncpa.com,N/A,N/A
+Patrick J. Haddon, CPA,leslie@pjhaddoncpa.com,Chicago,pjhaddoncpa.com,N/A,N/A
+Patrick J. Haddon, CPA,david@pjhaddoncpa.com,Chicago,pjhaddoncpa.com,N/A,N/A
