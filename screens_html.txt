@@ -1,0 +1,733 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <title>
+  Popular Stock Screens
+ - Screener</title>
+    
+
+    <!-- plausible -->
+    <script defer
+            event-user="free"
+            
+            
+            data-domain="screener.in"
+            src="https://plausible.screener.in/js/script.pageview-props.tagged-events.js"></script>
+    <script>window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+
+    <!-- FONT -->
+    <link rel="stylesheet" href="https://cdn-static.screener.in/inter/inter.bccd7465af74.css?v=2" />
+    <link rel="stylesheet" href="https://cdn-static.screener.in/fontello/css/fontello.835ae8880a8b.css?v=2" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn-static.screener.in/css/normalize.a2444750a947.css" media="all">
+    <link rel="stylesheet" href="https://cdn-static.screener.in/css/skeleton.e1c50fcb2cfe.css" media="all">
+    <link rel="stylesheet" href="https://cdn-static.screener.in/css/custom.306015fb1ae2.css" media="all">
+
+    
+<style>
+  main {
+    max-width: 720px;
+  }
+
+  #sidebar {
+    margin-top: 18px;
+  }
+
+  @media (min-width: 576px) {
+    #sidebar {
+      margin-left: 72px;
+      max-width: 300px;
+      min-width: 18%;
+    }
+
+    #sidebar .card {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: 992px) {
+    #sidebar {
+      /* align sidebar content till right */
+      margin-right: calc(-1 * var(--container-padding));
+    }
+  }
+</style>
+
+    
+    
+
+    <meta name="author" content="Mittal Analytics Private Limited">
+
+    <!-- PWA manifest -->
+    <meta name="theme-color"
+          content="#fff"
+          media="(prefers-color-scheme: light)">
+    <meta name="theme-color"
+          content="#222530"
+          media="(prefers-color-scheme: dark)">
+    <link rel="manifest" href="/static/manifest.json">
+
+    <!-- favicons -->
+    <link rel="apple-touch-icon"
+          sizes="180x180"
+          href="https://cdn-static.screener.in/favicon/apple-touch-icon.b6e5f24bf7d3.png">
+    <link rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="https://cdn-static.screener.in/favicon/favicon-32x32.00205914303a.png">
+    <link rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="https://cdn-static.screener.in/favicon/favicon-16x16.2b35594b2f33.png">
+    <link rel="mask-icon"
+          href="https://cdn-static.screener.in/favicon/safari-pinned-tab.adbe3ed3c5ad.svg"
+          color="#8ED443">
+    <meta name="msapplication-TileColor" content="#da532c">
+  </head>
+
+  <body class="light flex-column">
+    
+      <nav class="u-full-width no-print">
+        <div id="mobile-search"><div class="has-addon left-addon dropdown-typeahead">
+  <i class="addon icon-search"></i>
+  <input
+    aria-label="Search for a company"
+    type="search"
+    autocomplete="off"
+    spellcheck="false"
+    placeholder="Search for a company"
+    class="u-full-width"
+    
+    data-company-search="true">
+</div>
+</div>
+
+<ul class="bottom-menu-bar hide-from-tablet-landscape">
+  
+    <li class="">
+      <a href="/">
+        <i class="icon-news"></i>
+        <br>
+        Feed
+      </a>
+    </li>
+  
+
+  <li class="active">
+    <a href="/explore/">
+      <i class="icon-screens"></i>
+      <br>
+      Screens
+    </a>
+  </li>
+
+  <li>
+    <button type="button"
+            onclick="MobileMenu.toggleSearch(this)"
+            class="search-button"
+            title="Search">
+      <i class="icon-search" style="font-size: 18px"></i>
+    </button>
+  </li>
+
+  <li>
+    <button class="button-plain" onclick="Modal.showInModal('#nav-tools-menu')">
+      <i class="icon-tools"></i>
+      <br>
+      Tools
+    </button>
+  </li>
+
+  
+    <li class="">
+      <button class="button-plain" onclick="Modal.showInModal('#nav-user-menu')">
+        <i class="icon-user"></i>
+        <br>
+        Account
+      </button>
+    </li>
+  
+</ul>
+
+        <div class="top-nav-holder">
+          <div class="container">
+
+
+
+<div class="layer-holder top-navigation">
+  <div class="layer flex flex-space-between"
+       style="align-items: center;
+              height: 50px">
+    <div class="flex" style="align-items: center">
+      <a href="/" class="logo-holder">
+        <img alt="Screener Logo"
+             class="logo"
+             src="https://cdn-static.screener.in/img/logo-black.f44abb4998d1.svg" />
+      </a>
+
+      <div class="desktop-links" style="margin-left: 48px">
+        <a href="/">
+          
+            Feed
+          
+        </a>
+        <a href="/explore/">Screens</a>
+        <div class="dropdown-menu">
+          <button class="button-plain"
+                  type="button"
+                  onclick="Utils.toggleDropdown(event)">
+            Tools
+            <i class="icon-down"></i>
+          </button>
+          <ul class="dropdown-content flex-column tools-menu"
+              style="width: 350px"
+              id="nav-tools-menu">
+            <li>
+              <a href="/screen/new/"
+                 class="flex flex-align-center flex-gap-16">
+                <div class="bg-stripes square-56">
+                  <img src="https://cdn-static.screener.in/icons/screens.e960a5daedf9.svg" alt="Create a stock screen">
+                </div>
+                <div>
+                  <div class="font-weight-500 font-size-14">Create a stock screen</div>
+                  <div class="sub font-size-13">Run queries on 10 years of financial data</div>
+                </div>
+              </a>
+            </li>
+            <li class="flex flex-align-center no-hover" style="padding: 4px 0;">
+              <div class="button button-primary premium-indicator flex flex-align-center">
+                <img src="https://cdn-static.screener.in/icons/crown.fb0d2413ee43.svg"
+                     alt="Premium icon"
+                     style="margin-right: 8px">
+                <span>Premium features</span>
+              </div>
+              <hr class="flex-grow" style="padding: 0; margin: 0;">
+            </li>
+            
+              <li>
+                <a href="/ai/"
+                   class="flex flex-align-center flex-gap-16">
+                  <div class="bg-stripes square-56">
+                    <img src="https://cdn-static.screener.in/icons/ai.970ef1d1cabb.svg" alt="Screener AI">
+                  </div>
+                  <div>
+                    <div class="font-weight-500 font-size-14">Screener AI</div>
+                    <div class="sub font-size-13">Extract valuable insights from hundreds of company documents.</div>
+                  </div>
+                </a>
+              </li>
+            
+            <li>
+              <a href="/hs/" class="flex flex-align-center flex-gap-16">
+                <div class="bg-stripes square-56">
+                  <img src="https://cdn-static.screener.in/icons/export.d623f0029933.svg" alt="Commodity Prices">
+                </div>
+                <div>
+                  <div class="font-weight-500 font-size-14">Commodity Prices</div>
+                  <div class="sub font-size-13">Analyze price trends for 10,000+ commodities over the past 10 years.</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/people/"
+                 class="flex flex-align-center flex-gap-16">
+                <div class="bg-stripes square-56">
+                  <img src="https://cdn-static.screener.in/icons/shares.10acc20cb936.svg"
+                       alt="Search shareholders by name">
+                </div>
+                <div>
+                  <div class="font-weight-500 font-size-14">Search shareholders</div>
+                  <div class="sub font-size-13">Find all companies where a person owns more than 1% of shares.</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/announcements/"
+                 class="flex flex-align-center flex-gap-16">
+                <div class="bg-stripes square-56">
+                  <img src="https://cdn-static.screener.in/icons/loudspeaker.88769927f6eb.svg" alt="Loudspeaker">
+                </div>
+                <div>
+                  <div class="font-weight-500 font-size-14">Company Announcements</div>
+                  <div class="sub font-size-13">
+                    Stay updated. Search, filter and set alerts for the newest disclosures and developments.
+                  </div>
+                </div>
+              </a>
+            </li>
+            
+              <li style="padding: 16px;">
+                <a href="/premium/?driver=top-nav-tools"
+                   class="button button-primary text-align-center"
+                   style="color: var(--white);
+                          padding: 10px 24px">Upgrade to premium</a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="show-from-tablet-landscape flex flex-gap-16"
+         style="justify-content: flex-end;
+                flex: 1 1 400px">
+      <div class="search" id="desktop-search"><div class="has-addon left-addon dropdown-typeahead">
+  <i class="addon icon-search"></i>
+  <input
+    aria-label="Search for a company"
+    type="search"
+    autocomplete="off"
+    spellcheck="false"
+    placeholder="Search for a company"
+    class="u-full-width"
+    
+    data-company-search="true">
+</div>
+</div>
+
+      
+        <div id="account-dropdown" class="dropdown-menu">
+          <button class="account" type="button" onclick="Utils.toggleDropdown(event)">
+            <i class="icon-user-line blue-icon"></i>
+            saksham
+            
+            <i class="icon-down"></i>
+          </button>
+
+          <div class="dropdown-content flex-column font-size-14 font-weight-500"
+               style="right: 0;
+                      width: 154px"
+               id="nav-user-menu">
+            <a href="/user/account/">
+              <i class="icon-settings"></i>
+              Profile
+            </a>
+            <a href="/alerts/">
+              <i class="icon-bell"></i>
+              Alerts
+            </a>
+            <a href="/notebook/">
+              <i class="icon-book-open"></i>
+              Notebook
+            </a>
+            
+            
+              <a href="/premium/?driver=user-nav-dropdown">
+                <i class="icon-crown"></i>
+                Upgrade
+              </a>
+            
+            
+              
+                <a href="/ai/?driver=user-nav-dropdown">
+                  <i class="icon-chat-ai"></i>
+                  Screener AI
+                </a>
+              
+            
+            <hr class="no-hover">
+            <form action="/logout/" method="post" style="padding: 0">
+              <input type="hidden" name="csrfmiddlewaretoken" value="5rRXUOOxk85rc4m1wFLU8jSGoqfoDdt6hJHUhIwxmwUg4N967z7lWCEU9ew5J7OP">
+              <button type="submit"
+                      class="button-plain"
+                      style="width: 100%;
+                             padding: 4px 16px">
+                <i class="icon-off"></i>
+                Logout
+              </button>
+            </form>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+      </nav>
+    
+
+    
+    
+
+    
+<div class="container flex-grow">
+  <div class="breadcrumb"></div>
+  <div class="flex flex-column-mobile">
+    <main class="flex-grow">
+      
+
+
+  
+    
+    
+    
+
+    
+    
+  
+
+
+
+
+
+
+      
+      
+      <div class="card card-large">
+        
+  
+  <div class="flex-row flex-space-between">
+    <h1>Popular Stock Screens</h1>
+    <div>
+      
+    </div>
+  </div>
+
+  <ul class="items">
+  
+  <li>
+    <a href="/screens/343087/fii-buying/">
+      <strong>FII Buying</strong>
+      <span class="sub">FII buying</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/screens/1/the-bull-cartel/">
+      <strong>The Bull Cartel</strong>
+      <span class="sub">Companies with a good quarterly growth. Specially made to keep a track of latest quarterly results. For best results, set an email alert for the screen.</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/screens/6994/low-on-10-year-average-earnings/">
+      <strong>Low on 10 year average earnings</strong>
+      <span class="sub">Graham liked to value stocks based on average earnings of multiple years. This screen uses 10 year average earnings.</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/screens/59/magic-formula/">
+      <strong>Magic Formula</strong>
+      <span class="sub">Based on famous Magic Formula.</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/screens/178/growth-stocks/">
+      <strong>Growth Stocks</strong>
+      <span class="sub">A stock screen to find stocks with high growth at reasonable price. G Factor is a score out of 10. It is based on recent quarterly growth of the company as well the quality of the earnings.</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/screens/3/highest-dividend-yield-shares/">
+      <strong>Highest Dividend Yield Shares</strong>
+      <span class="sub">Stocks that have been consistently paying out dividend sorted on highest yield.</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/screens/214283/companies-creating-new-high/">
+      <strong>Companies creating new high</strong>
+      <span class="sub">Companies with current price around 52 week high</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/screens/336509/golden-crossover/">
+      <strong>Golden Crossover</strong>
+      <span class="sub">When 50 DMA moves above 200 DMA from below</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/screens/97687/capacity-expansion/">
+      <strong>Capacity expansion</strong>
+      <span class="sub">Companies undergoing major capacity expansion. Companies where fixed assets have doubled over last 3 years or fixed assets (including CWIP) have increased over 50% in last one year.</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/screens/2/piotroski-scan/">
+      <strong>Piotroski Scan</strong>
+      <span class="sub">Companies with Piotroski score of 9 which reflects nine criteria used to determine the strength of a firm&#x27;s financial position. It is based on 3 most important criteria: Profitability, Leverage and operating efficiency. Please read more about it at: http://www.investopedia.com/terms/p/piotroski-score.asp</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/screens/18/high-growth-high-roe-low-pe/">
+      <strong>High Growth High RoE  Low PE</strong>
+      <span class="sub">Undervalued companies</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/screens/49/loss-to-profit-companies/">
+      <strong>Loss to Profit Companies</strong>
+      <span class="sub">Companies which had a turnaround and had quarterly results from loss to profit.</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/screens/15310/benjamin-graham-and-warren-buffett/">
+      <strong>Benjamin Graham and Warren Buffett</strong>
+      <span class="sub">In an article in ET, Dr Vikas V Gupta has explained the rigorous filter that he put the stocks through to identify the value stocks: Step 1: Filter out all companies with sales less than Rs 250 cr. Companies with sales lower than this are …</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/screens/126864/debt-reduction/">
+      <strong>Debt reduction...</strong>
+      <span class="sub">Companies with expansion</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/screens/57601/coffee-can-portfolio/">
+      <strong>Coffee Can Portfolio</strong>
+      <span class="sub">Based on the book by Saurabh Mukherjee.</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/screens/239270/app/">
+      <strong>app</strong>
+      <span class="sub">first screen</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/screens/440753/price-volume-action/">
+      <strong>Price Volume Action</strong>
+      <span class="sub">Companies where weekly volumes have increased by more than 5x and price movement is positive.</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/screens/4928/darvas-scan/">
+      <strong>Darvas Scan</strong>
+      <span class="sub">Within 10% of 52w High, 100% of 52w Low, Volume &gt; 100000 &amp; Price &gt; 10</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/screens/234/bluest-of-the-blue-chips/">
+      <strong>Bluest of the Blue Chips</strong>
+      <span class="sub">Large Caps (Mkt Cap &gt; 3000 Crs) with solid profit growth, return of equity and trading at attractive valuations.</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/screens/184/value-stocks/">
+      <strong>Value Stocks</strong>
+      <span class="sub">High OPM,ROCE,Low D/E</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/screens/985942/rsi-oversold-stocks/">
+      <strong>RSI - Oversold Stocks</strong>
+      <span class="sub">Stocks with RSI of less than 30.</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/screens/86/quarterly-growers/">
+      <strong>Quarterly Growers</strong>
+      <span class="sub">Q0&gt;Q1&gt;Q2&gt;Q3</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/screens/60880/multibagger-stocks/">
+      <strong>Multibagger Stocks</strong>
+      <span class="sub">Stocks having huge potential to be multibaggers</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/screens/885655/top-100-stocks/">
+      <strong>Top 100 stocks</strong>
+      <span class="sub">Top 100 stocks</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/screens/209239/breakout-stocks/">
+      <strong>Breakout stocks</strong>
+      <span class="sub">Within 10% of 52w High, 100% of 52w Low, Volume &gt; 100000 &amp; Price &gt; 10</span>
+    </a>
+  </li>
+  
+</ul>
+
+  
+
+
+
+<div class="pagination"><div class="flex-baseline options"><a href="#" class="active">1</a><a href="?page=2" class="ink-900">2</a><a href="?page=3" class="ink-900">3</a><a href="?page=4" class="ink-900">4</a><button disabled="disabled">…</button><a href="?page=2">
+            Next <i class="icon-right"></i></a></div></div>
+
+  
+
+      </div>
+      
+    </main>
+    <aside id="sidebar" class="flex-grow ">
+      
+  <form action="/screens/search/">
+    <div class="form-field">
+      <label for="search-screen">Search term</label>
+      <input class="small"
+             id="search-screen"
+             name="q"
+             type="search"
+             placeholder="eg. Loss to profit">
+    </div>
+
+    <button type="submit" class="button-small">
+      <i class="icon-search"></i>
+      Search
+    </button>
+  </form>
+
+    </aside>
+  </div>
+</div>
+
+
+    
+      
+
+<footer id="large-footer">
+  <div class="flex-row flex-space-between flex-column-tablet container no-print">
+    <div class="hide-from-tablet" style="margin-bottom: 16px;">
+      <img src="https://cdn-static.screener.in/img/logo-black.f44abb4998d1.svg"
+           alt="Screener Logo"
+           style="max-width: 120px"
+           class="logo">
+    </div>
+
+    <div class="show-from-tablet" style="padding: 0 64px 0 0;">
+      <img src="https://cdn-static.screener.in/img/logo-black.f44abb4998d1.svg"
+           alt="Screener Logo"
+           style="max-width: 120px"
+           class="logo">
+      <p class="font-size-19" style="font-weight: 500;">Stock analysis and screening tool</p>
+      <p class="sub">
+        Mittal Analytics Private Ltd &copy; 2009-2025
+        <br>
+        Made with <i class="icon-heart red"></i> in India.
+      </p>
+      <p class="sub font-size-13">Data provided by C-MOTS Internet Technologies Pvt Ltd</p>
+      <p class="font-size-13 sub">
+        <a href="/guides/terms/" class="underline-link">Terms</a> & <a href="/guides/privacy/" class="underline-link">Privacy</a>.
+      </p>
+    </div>
+
+    <div class="flex flex-end flex-space-between flex-grow"
+         style="max-width: 600px">
+      <div class="flex-grow">
+        <div class="title">Product</div>
+        <ul class="items">
+          <li>
+            <a href="/premium/?driver=footer">Premium</a>
+          </li>
+          <li>
+            <a href="/docs/changelog/">What's new?</a>
+          </li>
+          <li>
+            <a href="https://bit.ly/learnscreener">Learn</a>
+          </li>
+          <li>
+            <button class="a2hs button-secondary button-small">
+              <i class="icon-flash"></i>
+              Install
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex-grow">
+        <div class="title">Team</div>
+        <ul class="items">
+          <li>
+            <a href="/guides/about-us/">About us</a>
+          </li>
+          <li>
+            <a href="/support/">Support</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex-grow">
+        <div class="title">Theme</div>
+        <ul class="items">
+          <li>
+            <button onclick="SetTheme('light')"
+                    aria-label="Set light theme"
+                    class="button-plain">
+              <i class="icon-sun"></i>
+              Light
+            </button>
+          </li>
+          <li>
+            <button onclick="SetTheme('dark')"
+                    aria-label="Set dark theme"
+                    class="button-plain">
+              <i class="icon-moon"></i>
+              Dark
+            </button>
+          </li>
+          <li>
+            <button onclick="SetTheme('auto')"
+                    aria-label="Set auto theme"
+                    class="button-plain">
+              <i class="icon-monitor"></i>
+              Auto
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hide-from-tablet">
+      <hr>
+      <p class="sub">Mittal Analytics Private Ltd &copy; 2009-2024</p>
+      <p class="sub">Data provided by C-MOTS Internet Technologies Pvt Ltd</p>
+      <p class="sub">
+        <a href="/guides/terms/" class="underline-link">Terms</a>
+        & <a href="/guides/privacy/" class="underline-link">Privacy</a>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+    
+
+    <!-- Important JS (which provide global objects)- check below too -->
+    <script src="https://cdn-static.screener.in/js/dialog-polyfill.min.2b5bf9a032d2.js"></script>
+    <script src="https://cdn-static.screener.in/js/utils.b2ed21a75740.js"></script>
+    <script src="https://cdn-static.screener.in/js/modal.33ac63eb7887.js"></script>
+    <script src="https://cdn-static.screener.in/js/typeahead.8dcc9ac93685.js"></script>
+    <script src="https://cdn-static.screener.in/js/filter.component.888b0801c31d.js"></script>
+
+    <!-- Independent JS scripts for page interactions -->
+    <script src="https://cdn-static.screener.in/js/navbar.3fe7f0f4a630.js"></script>
+    <script src="https://cdn-static.screener.in/js/company.search.e48f94642999.js"></script>
+    
+    
+
+    <!-- Service worker installer for PWA -->
+    <script src="https://cdn-static.screener.in/js/pwa.bb2d31cc8b94.js"></script>
+  </body>
+</html>
